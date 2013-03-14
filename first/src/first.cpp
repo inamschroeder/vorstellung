@@ -9,7 +9,17 @@
 #include <iostream>
 using namespace std;
 
+int fib(int n){
+	if(n == 0){
+		return 0;
+	}
+	if(n == 1){
+		return 1;
+	}
+	return fib(n - 1) + fib(n - 2);
+}
+
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	cout << fib(6) << endl; // prints !!!Hello World!!!
 	return 0;
 }
