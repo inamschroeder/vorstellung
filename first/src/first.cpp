@@ -19,6 +19,7 @@ int fib(int n){
 	return fib(n - 1) + fib(n - 2);
 }
 
+
 int fac(int n){
 if (n < 0){
 	return 0;
