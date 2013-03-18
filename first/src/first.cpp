@@ -7,52 +7,43 @@
 //============================================================================
 
 #include <iostream>
-#include <cmath>
+#include "Vector2D.h"
 using namespace std;
 
-int length(int x, int y){
-	return sqrt(x*x + y*y);
+void printVector2D(Vector2D v){
+	cout << "(" << v.x() << ", " << v.y() << ")";
 }
-
-int dot(int x1, int y1, int x2, int y2){
-	return sqrt(x1*x2 + y1*y2);
-}
-
-int sum(int n){
-	if(n < 0) return 0;
-	return n + sum(n-1);
-}
-
-int fib(int n){
-	if(n == 0){
-		return 0;
-	}
-	if(n == 1){
-		return 1;
-	}
-	return fib(n - 1) + fib(n - 2);
-}
-
-
-int fac(int n){
-if (n < 0){
-	return 0;
-}
-if(n == 0 || n == 1){
-	return 1;
-}
-return n * fac(n-1);
-}
-
 
 int main() {
 
-	cout << "Length:" << length(2, 2) << endl;
+	Vector2D a = Vector2D(1.0, 2.0);
+	Vector2D b = Vector2D(4.0, 5.0);
 
-	cout << "Summe:" << sum(13) << endl;
+	cout << "Length: " << a.length() << endl;
 
-	cout << "Fibonacci: " << fib(6) << endl;
+	cout << "Addition: ";
+	printVector2D(Vector2D(a + b));
+	cout << endl;
 
-	cout << "Fakultät:" << fac(5) << endl;
+	cout << "Subtraktion: ";
+	printVector2D(Vector2D(a - b));
+	cout << endl;
+
+	cout << "Skalarmulti: ";
+	printVector2D(Vector2D(a * 2));
+	cout << endl;
+
+	cout << "Skalardiv: ";
+	printVector2D(Vector2D(a / 2));
+	cout << endl;
+
+	cout << "Dot: ";
+	cout << dot(a, b);
+	cout << endl;
+
+	cout << "Normalize:";
+	printVector2D(normalize(a));
+	cout << endl;
+
 	return 0;
 }
