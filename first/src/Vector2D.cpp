@@ -70,7 +70,8 @@ void Vector2D::setXY(float newX, float newY)
 
 float Vector2D::length() const
 {
-   return sqrt(mElement[X] * mElement[X] + mElement[Y] * mElement[Y]);
+	//Länge des Vectors
+   return 0;
 }
 
 
@@ -114,13 +115,15 @@ Vector2D& Vector2D::operator /=(float rhs)
 
 const Vector2D operator +(const Vector2D& lhs, const Vector2D& rhs)
 {
-   return Vector2D(lhs) += rhs;
+	//Addition
+   return Vector2D(0, 0);
 }
 
 
 const Vector2D operator -(const Vector2D& lhs, const Vector2D& rhs)
 {
-   return Vector2D(lhs) -= rhs;
+	//Subtraktion
+   return Vector2D(0, 0);
 }
 
 
@@ -132,21 +135,25 @@ const Vector2D operator *(float lhs, const Vector2D& rhs)
 
 const Vector2D operator *(const Vector2D& lhs, float rhs)
 {
-   return Vector2D(lhs) *= rhs;
+	//skalare Multiplikation
+   return Vector2D(0, 0);
 }
 
 
 const Vector2D operator /(const Vector2D& lhs, float rhs)
 {
-   return Vector2D(lhs) /= rhs;
+	//skalare Division
+   return Vector2D(0, 0);
 }
 
 
 float dot(const Vector2D& lhs, const Vector2D& rhs)
 {
-   return lhs.x() * rhs.x() + lhs.y() * rhs.y();
+	//Dot-Produkt
+   return 0;
 }
 
 const Vector2D normalize(const Vector2D& v){
-	return Vector2D(v / v.length());
+	//Normalisierung des eingegebenen Vectors
+	return Vector2D(0, 0);
 }
