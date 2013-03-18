@@ -1,0 +1,7 @@
+Length: 2.23607
+Addition: (5, 7)
+Subtraktion: (-3, -3)
+Skalarmulti: (2, 4)
+Skalardiv: (0.5, 1)
+Dot: 14
+Normalize:(0.447214, 0.894427)
