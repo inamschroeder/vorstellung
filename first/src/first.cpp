@@ -15,7 +15,7 @@ int length(int x, int y){
 }
 
 int dot(int x1, int y1, int x2, int y2){
-	return 0;
+	return sqrt(x1*x2 + y1*y2);
 }
 
 int sum(int n){
