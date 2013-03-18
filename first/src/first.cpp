@@ -7,7 +7,21 @@
 //============================================================================
 
 #include <iostream>
+#include <cmath>
 using namespace std;
+
+int length(int x, int y){
+	return sqrt(x*x + y*y);
+}
+
+int dot(int x1, int y1, int x2, int y2){
+	return 0;
+}
+
+int sum(int n){
+	if(n < 0) return 0;
+	return n + sum(n-1);
+}
 
 int fib(int n){
 	if(n == 0){
@@ -32,10 +46,13 @@ return n * fac(n-1);
 
 
 int main() {
-	cout << fib(6) << endl; // prints !!!Hello World!!!
 
-	int a = fac(5);
+	cout << "Length:" << length(2, 2) << endl;
 
-	cout << a << endl; // prints !!!Hello World!!!
+	cout << "Summe:" << sum(13) << endl;
+
+	cout << "Fibonacci: " << fib(6) << endl;
+
+	cout << "Fakultät:" << fac(5) << endl;
 	return 0;
 }
